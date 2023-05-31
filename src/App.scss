@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+// 폰트 설정
+@font-face {
+  font-family: 'SUIT-Heavy';
+  src: url(./font/SUIT-Heavy.woff2);
+}
+
+@font-face {
+  font-family: 'SUIT-Medium';
+  src: url(./font/SUIT-Medium.woff2);
+}
+
+// 공백 제거
+@mixin zero() {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+// 가운데 정렬
+@mixin middle() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 자주 사용
+$main-color: #ffffff;
+$main-font: 'SUIT-Medium';
+$size-100: 100%;
+$font-size: 16px;
+$text-color: #534444;
+
+// 배경
+.App {
+  width: $size-100;
+  height: 100vh;
+  text-align: center;
+  background-color: red;
+  @include zero();
+  @include middle();
+}
+
+// 컨테이너
+.wrapper {
+  width: 500px;
+  height: 700px;
+  background-color: $main-color;
+  border-radius: 20px;
+  box-shadow: 10px 10px 40px grey;
+}
+
+// 헤더
+.header {
+  background-image: linear-gradient(to right, #97b9db, #b3d1e9);
+  height: 150px;
+  border-radius: 20px 20px 0px 0px;
+  @include middle();
+  flex-direction: column;
+
+  // toDoList
+  h2 {
+    @include zero();
+    color: $main-color;
+    font-family: 'SUIT-Heavy';
+  }
+
+  // 현재 날짜 및 시간
+  p {
+    color: $main-color;
+    font-family: $main-font;
+  }
+}
+
+// 입력창
+.input {
+  @include middle();
+  height: 40px;
+
+  button {
+    border: none;
+    width: 10%;
+    height: $size-100;
+  }
+}
+
+.input-box {
+  @include zero();
+  width: $size-100;
+  height: $size-100;
+  border: 1px solid #eee;
+  background-color: #eee;
+  color: $text-color;
+  padding: 0px 10px 0px 10px;
+  font-size: $font-size;
+  font-family: $main-font;
+}
+
+.input-box:focus {
+  outline: none;
+}
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
