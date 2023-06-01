@@ -3,16 +3,17 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import dayjs from 'dayjs'
 import 'dayjs/locale/ko'
-import { AiFillEdit, AiFillDelete, AiFillTool } from 'react-icons/ai';
+import { AiFillEdit, AiFillDelete, AiFillTool, AiFillCheckCircle } from 'react-icons/ai';
+import { db } from './firebase'
+import { query, collection, onSnapshot } from 'firebase/firestore'
+
 
 function App() {
-
   let [timer, setTimer] = useState(dayjs());
   timer.format();
   let [list, setList] = useState('');
   let [addList, setAddList] = useState([]);
   let [edit, setEdit] = useState('false');
-
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,8 +34,6 @@ function App() {
       setList('');
     }
   }
-
-
 
   return (
     <div className="App">
@@ -87,7 +86,7 @@ function App() {
                     {timer.format("YYYY. MM. DD")}
 
                     {/* 수정 버튼 */}
-                    <button onClick={() => { console.log(addList[idx]) }}>
+                    <button>
                       <AiFillTool size="16" color="bbb" />
                     </button>
 
