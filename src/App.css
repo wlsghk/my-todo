@@ -10,7 +10,6 @@
   align-items: center;
 }
 
-/* 컨테이너 */
 .wrapper {
   width: 500px;
   height: 700px;
@@ -19,7 +18,6 @@
   box-shadow: 10px 10px 40px grey;
 }
 
-/* 헤더 */
 .header {
   background-image: linear-gradient(to right, #97b9db, #b3d1e9);
   height: 150px;
@@ -29,7 +27,6 @@
   align-items: center;
   flex-direction: column;
 }
-
 .header h2 {
   padding: 0px;
   margin: 0px;
@@ -46,7 +43,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -66,10 +62,7 @@
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
-}
-
-/*# sourceMappingURL=App.css.map */
+}/*# sourceMappingURL=App.css.map */
