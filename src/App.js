@@ -13,7 +13,8 @@ function App() {
   timer.format();
   let [list, setList] = useState('');
   let [addList, setAddList] = useState([]);
-  let [edit, setEdit] = useState('false');
+  let [edit, setEdit] = useState('');
+  let [editIdx, setEditIdx] = useState(-1);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -77,18 +78,44 @@ function App() {
             return (
               <div className="todo" key={idx}>
                 <div className="todo-box">
-                  <p className="todo-list">
+                  {editIdx === idx ? (
+                    <input onChange={(e) => { setEdit(e.target.value) }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          let updatedList = [...addList];
+                          updatedList[idx] = edit;
+                          setAddList(updatedList);
+                          setEditIdx(-1);
+                          setEdit('');
+                        }
+                      }} />
+                  ) : (<p className="todo-list">
                     {addList[idx]}
-                  </p>
+                  </p>)}
                   <div>
 
                     {/* 날짜 */}
                     {timer.format("YYYY. MM. DD")}
 
                     {/* 수정 버튼 */}
-                    <button>
-                      <AiFillTool size="16" color="bbb" />
-                    </button>
+                    {editIdx === idx ? (
+                      <button onClick={() => {
+                        let updatedList = [...addList];
+                        updatedList[idx] = edit;
+                        setAddList(updatedList);
+                        setEditIdx(-1);
+                        setEdit('');
+                      }}>
+                        <AiFillCheckCircle size="16" color="bbb" />
+                      </button>
+                    ) : (
+                      <button onClick={() => {
+                        setEdit(addList[idx]);
+                        setEditIdx(idx);
+                      }}>
+                        <AiFillTool size="16" color="bbb" />
+                      </button>
+                    )}
 
                     {/* 삭제 버튼 */}
                     <button onClick={() => {
