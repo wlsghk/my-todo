@@ -55,6 +55,7 @@ function App() {
           {/* 엔터 키 */}
           <input type="text"
             value={list}
+            placeholder='Please register all your work.'
             onKeyDown={(e) => activeEnter(e)}
             onChange={(e) => {
               setList(e.target.value);

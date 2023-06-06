@@ -11,6 +11,11 @@
   src: url(./font/SUIT-Medium.woff2);
 }
 
+@font-face {
+  font-family: 'SUIT-Light';
+  src: url(./font/SUIT-Light.woff2);
+}
+
 // 공백 제거
 @mixin zero() {
   padding: 0px;
@@ -99,6 +104,11 @@ input {
   font-family: $main-font;
   color: $text-blue;
   font-size: 19px;
+}
+
+input::placeholder {
+  color: #bbb;
+  font-family: 'SUIT-Light';
 }
 
 .input {
