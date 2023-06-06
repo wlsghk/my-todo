@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/my-todo/static/css/main.8efb8234.css",
-    "main.js": "/my-todo/static/js/main.3bc912a9.js",
+    "main.css": "/my-todo/static/css/main.2a0ef9fb.css",
+    "main.js": "/my-todo/static/js/main.a9317734.js",
     "static/js/787.97a945da.chunk.js": "/my-todo/static/js/787.97a945da.chunk.js",
     "static/media/SUIT-Medium.woff2": "/my-todo/static/media/SUIT-Medium.ed6c62d07520a85069ed.woff2",
+    "static/media/SUIT-Light.woff2": "/my-todo/static/media/SUIT-Light.f1052626f04fc183963e.woff2",
     "static/media/SUIT-Heavy.woff2": "/my-todo/static/media/SUIT-Heavy.09ba8132b9cc058ecdda.woff2",
     "index.html": "/my-todo/index.html",
-    "main.8efb8234.css.map": "/my-todo/static/css/main.8efb8234.css.map",
-    "main.3bc912a9.js.map": "/my-todo/static/js/main.3bc912a9.js.map",
+    "main.2a0ef9fb.css.map": "/my-todo/static/css/main.2a0ef9fb.css.map",
+    "main.a9317734.js.map": "/my-todo/static/js/main.a9317734.js.map",
     "787.97a945da.chunk.js.map": "/my-todo/static/js/787.97a945da.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8efb8234.css",
-    "static/js/main.3bc912a9.js"
+    "static/css/main.2a0ef9fb.css",
+    "static/js/main.a9317734.js"
   ]
 }
